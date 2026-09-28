@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #1B9DF5;
+  --color-brand-dark: #0D6EB5;
+  --color-accent: #55D156;
+  --color-sun: #55D156;
+  --font-sans: Poppins, Inter, system-ui, sans-serif;
+}
+
+body {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+@layer components {
+  .btn {
+    @apply block w-full rounded-2xl bg-brand py-3.5 font-semibold text-white my-2 transition active:scale-95 disabled:opacity-40;
+  }
+  .btn-y {
+    @apply bg-accent text-white font-bold;
+  }
+  .btn-g {
+    @apply bg-transparent text-brand border-2 border-brand;
+  }
+  .btn-r {
+    @apply bg-red-600;
+  }
+  .btn-s {
+    @apply inline-block w-auto px-3.5 py-2 text-sm mr-1 my-1;
+  }
+  .card {
+    @apply bg-slate-50 border border-slate-200 rounded-3xl p-4 my-2.5 shadow-sm;
+  }
+  .chip {
+    @apply inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .opt {
+    @apply flex items-center gap-2.5 p-3 border-2 border-slate-200 rounded-2xl my-1.5 cursor-pointer bg-white;
+  }
+  .opt.on {
+    @apply border-brand bg-sky-50;
+  }
+  .inp {
+    @apply w-full p-3 rounded-2xl border-[1.5px] border-slate-200 bg-white mt-1 mb-2.5;
+  }
+  .lbl {
+    @apply text-sm font-semibold;
+  }
+  .mu {
+    @apply text-sm text-slate-500;
+  }
+}
